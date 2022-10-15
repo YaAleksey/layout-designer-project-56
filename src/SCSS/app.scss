@@ -3,24 +3,17 @@
 
 @font-face {
   font-family: "Roboto Regular";
-  src: url(../fonts/Roboto/Roboto-Regular.ttf);
-}
-
-h1 {
-  @media (min-width: 1240px) {
-  }
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
 
 body {
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 400;
   color: $main-color-text;
-  background-color: $main-bg;
-}
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 27px;
 
-section.main-page {
+  background-color: $main-bg;
 }
 
 .container-content {
@@ -44,10 +37,9 @@ section.main-page {
 
   margin-top: 25px;
 
-  &__logo {
-    grid-column: 2/3;
-
+  &-logo {
     display: grid;
+    grid-column: 2/3;
     grid-template: 1fr / auto auto;
     justify-content: start;
 
@@ -58,10 +50,9 @@ section.main-page {
     }
   }
 
-  &__menu {
-    grid-column: 3/4;
-
+  &-menu {
     display: grid;
+    grid-column: 3/4;
     grid-template: 1fr / auto auto auto auto;
     justify-content: start;
 
@@ -70,22 +61,24 @@ section.main-page {
     }
   }
 
-  &__search {
+  &-search {
     grid-column: 4/-1;
 
     input::placeholder {
       @include fz-13-fw-400;
-      color: $arial-color;
 
       margin: auto 0;
-      padding: 0 10px 0 10px;
+      padding: 0 10px;
+
+      color: $arial-color;
     }
 
     .search {
-      background-color: $dark;
-      border-radius: 50px;
       min-width: 248px;
       min-height: 25px;
+
+      background-color: $dark;
+      border-radius: 50px;
     }
 
     input {
@@ -99,28 +92,29 @@ section.main-page {
   z-index: 2;
 
   padding: 200px 0;
+
   text-align: center;
 
   .form-block {
-    &__text {
+    &-text {
       padding-top: 31px;
     }
 
     .name-mail-form-grid {
-      margin: 17px auto 0 auto;
-      max-width: 570px;
-
       display: grid;
       grid-template: minmax(50px, auto) minmax(50px, auto) / minmax(273px, auto) minmax(273px, auto);
       grid-template-areas:
         "name mail"
         "btn btn";
       gap: 24px;
+      max-width: 570px;
+      margin: 17px auto 0;
 
       input::placeholder {
         @include fz-14-fw-700;
-        color: #fff;
         padding-left: 20px;
+
+        color: #fff;
       }
 
       .input-name {
@@ -131,11 +125,14 @@ section.main-page {
         grid-area: mail;
       }
 
-      &__btn {
+      &-btn {
         grid-area: btn;
-        @include fz-13-fw-400;
+
         color: #fff;
+
         background-color: $green;
+
+        @include fz-13-fw-400;
       }
     }
   }

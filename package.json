@@ -1,0 +1,28 @@
+{
+  "name": "layout-designer-project-56",
+  "version": "1.0.0",
+  "description": "second project \"music box\"",
+  "main": "index.html",
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^14.13.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YaAleksey/layout-designer-project-56.git"
+  },
+  "author": "Aleksey N.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YaAleksey/layout-designer-project-56/issues"
+  },
+  "homepage": "https://github.com/YaAleksey/layout-designer-project-56#readme"
+}

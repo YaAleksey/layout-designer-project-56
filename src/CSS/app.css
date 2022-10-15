@@ -1,7 +1,8 @@
 @font-face {
   font-family: "Roboto Regular";
-  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
+
 *,
 *::before,
 *::after {
@@ -11,7 +12,13 @@
 * {
   margin: 0;
   padding: 0;
+
   border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
 }
 
 :focus,
@@ -45,11 +52,6 @@ button {
   cursor: pointer;
 }
 
-a,
-a:visited {
-  text-decoration: none;
-}
-
 a:hover {
   text-decoration: none;
 }
@@ -68,8 +70,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
   font-weight: 400;
+  font-size: inherit;
 }
 
 .overfl-hidd {
@@ -94,17 +96,17 @@ h6 {
 
 .text-item {
   color: #fff;
+  font-weight: 400;
   font-size: 11px;
   line-height: 16.5px;
-  font-weight: 400;
 }
 
 .description-text {
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
   color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 24px;
 }
 
 .bd {
@@ -121,35 +123,39 @@ h6 {
   top: 0;
   left: 0;
   z-index: 1;
+
   width: 100%;
   height: 100%;
+
   vertical-align: middle;
-  background-image: url(../images/banner.png);
+
+  background-image: url("../images/banner.png");
   background-position: center;
   background-size: cover;
+
   content: "";
 }
 
 .big-title {
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 60px;
-  line-height: 90px;
-  font-weight: 700;
   color: #fff;
+  font-weight: 700;
+  font-size: 60px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 90px;
 }
 
 .less-title {
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 38px;
-  line-height: 57px;
-  font-weight: 700;
   color: #fff;
+  font-weight: 700;
+  font-size: 38px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 57px;
 }
 
 .input-field {
+  background: rgb(0 0 0 / 0%);
   border: 2px solid #cacaca;
   border-radius: 3px;
-  background: rgba(0, 0, 0, 0);
 }
 
 .bord-rad-5 {
@@ -158,25 +164,29 @@ h6 {
 
 @font-face {
   font-family: "Roboto Regular";
-  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
+
 body {
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 400;
   color: #cacaca;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 27px;
+
   background-color: #08020d;
 }
 
 .container-content {
   position: relative;
 }
+
 @media (max-width: 454px) {
   .container-content {
     max-width: 414px;
   }
 }
+
 @media (min-width: 1240px) {
   .container-content {
     min-width: 1200px;
@@ -186,127 +196,114 @@ body {
 .header {
   position: relative;
   z-index: 2;
+
   display: grid;
-  grid-template: 1fr/8.3% 13% 53.05% 25.63%;
+  grid-template: 1fr / 8.3% 13% 53.05% 25.63%;
   margin-top: 25px;
 }
-.header__logo {
-  grid-column: 2/3;
+
+.header-logo {
   display: grid;
-  grid-template: 1fr/auto auto;
+  grid-column: 2/3;
+  grid-template: 1fr / auto auto;
   justify-content: start;
 }
-.header__logo img {
+
+.header-logo img {
   align-self: center;
   max-width: 24px;
   max-height: 24px;
 }
-.header__menu {
-  grid-column: 3/4;
+
+.header-menu {
   display: grid;
-  grid-template: 1fr/auto auto auto auto;
+  grid-column: 3/4;
+  grid-template: 1fr / auto auto auto auto;
   justify-content: start;
 }
-.header__menu a {
+
+.header-menu a {
   align-self: center;
 }
-.header__search {
+
+.header-search {
   grid-column: 4/-1;
 }
-.header__search input::-moz-placeholder {
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 13.3px;
-  line-height: 15.3px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #757575;
+
+.header-search input::placeholder {
   margin: auto 0;
-  padding: 0 10px 0 10px;
-}
-.header__search input:-ms-input-placeholder {
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 13.3px;
-  line-height: 15.3px;
-  font-weight: 400;
-  text-transform: uppercase;
+  padding: 0 10px;
+
   color: #757575;
-  margin: auto 0;
-  padding: 0 10px 0 10px;
-}
-.header__search input::placeholder {
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 13.3px;
-  line-height: 15.3px;
   font-weight: 400;
+  font-size: 13.3px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 15.3px;
   text-transform: uppercase;
-  color: #757575;
-  margin: auto 0;
-  padding: 0 10px 0 10px;
 }
-.header__search .search {
-  background-color: #3c3b3d;
-  border-radius: 50px;
+
+.header-search .search {
   min-width: 248px;
   min-height: 25px;
+
+  background-color: #3c3b3d;
+  border-radius: 50px;
 }
-.header__search input {
+
+.header-search input {
   align-self: center;
 }
 
 .description {
   position: relative;
   z-index: 2;
+
   padding: 200px 0;
+
   text-align: center;
 }
-.description .form-block__text {
+
+.description .form-block-text {
   padding-top: 31px;
 }
+
 .description .form-block .name-mail-form-grid {
-  margin: 17px auto 0 auto;
-  max-width: 570px;
   display: grid;
-  grid-template: minmax(50px, auto) minmax(50px, auto)/minmax(273px, auto) minmax(273px, auto);
+  grid-template: minmax(50px, auto) minmax(50px, auto) / minmax(273px, auto) minmax(273px, auto);
   grid-template-areas: "name mail" "btn btn";
   gap: 24px;
+
+  max-width: 570px;
+  margin: 17px auto 0;
 }
-.description .form-block .name-mail-form-grid input::-moz-placeholder {
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 14px;
-  line-height: 16.4px;
-  font-weight: 700;
-  color: #fff;
-  padding-left: 20px;
-}
-.description .form-block .name-mail-form-grid input:-ms-input-placeholder {
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 14px;
-  line-height: 16.4px;
-  font-weight: 700;
-  color: #fff;
-  padding-left: 20px;
-}
+
 .description .form-block .name-mail-form-grid input::placeholder {
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 14px;
-  line-height: 16.4px;
-  font-weight: 700;
-  color: #fff;
   padding-left: 20px;
+
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 16.4px;
 }
+
 .description .form-block .name-mail-form-grid .input-name {
   grid-area: name;
 }
+
 .description .form-block .name-mail-form-grid .input-mail {
   grid-area: mail;
 }
-.description .form-block .name-mail-form-grid__btn {
+
+.description .form-block .name-mail-form-grid-btn {
   grid-area: btn;
-  font-family: "Roboto Regular", sans-serif;
-  font-size: 13.3px;
-  line-height: 15.3px;
-  font-weight: 400;
-  text-transform: uppercase;
+
   color: #fff;
+  font-weight: 400;
+  font-size: 13.3px;
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 15.3px;
+  text-transform: uppercase;
+
   background-color: #34c176;
 }
