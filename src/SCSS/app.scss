@@ -1,0 +1,142 @@
+@import "_general";
+@import "_variable";
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+h1 {
+  @media (min-width: 1240px) {
+  }
+}
+
+body {
+  font-family: "Roboto Regular", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  color: $main-color-text;
+  background-color: $main-bg;
+}
+
+section.main-page {
+}
+
+.container-content {
+  position: relative;
+
+  @media (max-width: 454px) {
+    max-width: 414px;
+  }
+
+  @media (min-width: 1240px) {
+    min-width: 1200px;
+  }
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template: 1fr / 8.3% 13% 53.05% 25.63%;
+
+  margin-top: 25px;
+
+  &__logo {
+    grid-column: 2/3;
+
+    display: grid;
+    grid-template: 1fr / auto auto;
+    justify-content: start;
+
+    img {
+      align-self: center;
+      max-width: 24px;
+      max-height: 24px;
+    }
+  }
+
+  &__menu {
+    grid-column: 3/4;
+
+    display: grid;
+    grid-template: 1fr / auto auto auto auto;
+    justify-content: start;
+
+    a {
+      align-self: center;
+    }
+  }
+
+  &__search {
+    grid-column: 4/-1;
+
+    input::placeholder {
+      @include fz-13-fw-400;
+      color: $arial-color;
+
+      margin: auto 0;
+      padding: 0 10px 0 10px;
+    }
+
+    .search {
+      background-color: $dark;
+      border-radius: 50px;
+      min-width: 248px;
+      min-height: 25px;
+    }
+
+    input {
+      align-self: center;
+    }
+  }
+}
+
+.description {
+  position: relative;
+  z-index: 2;
+
+  padding: 200px 0;
+  text-align: center;
+
+  .form-block {
+    &__text {
+      padding-top: 31px;
+    }
+
+    .name-mail-form-grid {
+      margin: 17px auto 0 auto;
+      max-width: 570px;
+
+      display: grid;
+      grid-template: minmax(50px, auto) minmax(50px, auto) / minmax(273px, auto) minmax(273px, auto);
+      grid-template-areas:
+        "name mail"
+        "btn btn";
+      gap: 24px;
+
+      input::placeholder {
+        @include fz-14-fw-700;
+        color: #fff;
+        padding-left: 20px;
+      }
+
+      .input-name {
+        grid-area: name;
+      }
+
+      .input-mail {
+        grid-area: mail;
+      }
+
+      &__btn {
+        grid-area: btn;
+        @include fz-13-fw-400;
+        color: #fff;
+        background-color: $green;
+      }
+    }
+  }
+}
