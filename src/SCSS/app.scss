@@ -48,15 +48,26 @@ body {
 
   text-align: center;
 
-  .form-block {
-    margin-top: 31px;
+  input::placeholder {
+    color: #fff;
+    @include font-x(700, 14px, 16.4px);
+    padding-left: 22px;
+  }
+
+  .name-mail-form-grid-btn {
+    color: #fff;
+    @include font-x(400, 13.3px, 15.4px);
+
+    text-transform: uppercase;
+
+    background-color: $green;
   }
 }
 
-@media (max-width: 454px) {
+@media (max-width: 799px) {
   .container-content {
     position: relative;
-    max-width: 454px;
+    max-width: 799px;
     padding: 250px 20px 200px 20px;
   }
 
@@ -64,9 +75,11 @@ body {
     position: absolute;
 
     top: 20px;
-    left: 27px;
+    left: 0px;
 
     z-index: 2;
+
+    padding: 0 20px;
 
     width: 100%;
 
@@ -91,21 +104,43 @@ body {
     }
 
     .search {
-      width: 88.5%;
+      width: 100%;
     }
   }
 
   .description {
-    .form-block {
-      margin-top: 16px;
+    .form-block-text {
+      margin: 16px 0;
+    }
+
+    .name-mail-form-grid {
+      display: grid;
+      grid-template: repeat(3, minmax(50px, 1fr)) / 1fr;
+      grid-template-areas:
+        "name"
+        "mail"
+        "btn";
+      gap: 24px;
+
+      .input-name {
+        grid-area: name;
+      }
+
+      .input-mail {
+        grid-area: mail;
+      }
+
+      .name-mail-form-grid-btn {
+        grid-area: btn;
+      }
     }
   }
 }
 
-@media (min-width: 1240px) {
+@media (min-width: 800px) {
   .container-content {
     position: relative;
-    min-width: 1240px;
+    min-width: 800px;
     padding: 200px 0;
   }
 
@@ -117,10 +152,16 @@ body {
 
     z-index: 2;
 
+    display: grid;
     width: 100%;
 
-    display: grid;
-    grid-template: 1fr / 8.3% 13% 53.05% 25.63%;
+    @media (min-width: 1440px) {
+      .search {
+        min-width: 248px;
+      }
+    }
+
+    grid-template: 1fr / 8.3% 13% 30% 23.05% 25.63%;
 
     .header-logo {
       grid-column: 2/3;
@@ -129,7 +170,7 @@ body {
     .header-menu {
       display: grid;
       grid-column: 3/4;
-      grid-template: 1fr / auto auto auto auto;
+      grid-template: auto / repeat(4, auto);
       justify-content: start;
 
       a {
@@ -138,11 +179,7 @@ body {
     }
 
     .header-search {
-      grid-column: 4/-1;
-
-      .search {
-        min-width: 248px;
-      }
+      grid-column: 5/-1;
 
       input {
         align-self: center;
@@ -151,6 +188,10 @@ body {
   }
 
   .description {
+    .form-block-text {
+      margin: 31px 0 17px 0;
+    }
+
     .name-mail-form-grid {
       display: grid;
       grid-template: minmax(50px, auto) minmax(50px, auto) / minmax(273px, auto) minmax(273px, auto);
@@ -160,12 +201,6 @@ body {
       gap: 24px;
       max-width: 570px;
       margin: 17px auto 0;
-
-      input::placeholder {
-        color: #fff;
-        @include font-x(700, 14px, 16.4px);
-        padding-left: 20px;
-      }
 
       .input-name {
         grid-area: name;
@@ -177,13 +212,6 @@ body {
 
       &-btn {
         grid-area: btn;
-
-        color: #fff;
-        @include font-x(400, 13.3px, 15.4px);
-
-        text-transform: uppercase;
-
-        background-color: $green;
       }
     }
   }

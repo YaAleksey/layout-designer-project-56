@@ -244,21 +244,52 @@ body {
   z-index: 2;
   text-align: center;
 }
-.description .form-block {
-  margin-top: 31px;
+.description input::-moz-placeholder {
+  color: #fff;
+  font-family: "Roboto Regular", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.4px;
+  padding-left: 22px;
+}
+.description input:-ms-input-placeholder {
+  color: #fff;
+  font-family: "Roboto Regular", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.4px;
+  padding-left: 22px;
+}
+.description input::placeholder {
+  color: #fff;
+  font-family: "Roboto Regular", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.4px;
+  padding-left: 22px;
+}
+.description .name-mail-form-grid-btn {
+  color: #fff;
+  font-family: "Roboto Regular", sans-serif;
+  font-weight: 400;
+  font-size: 13.3px;
+  line-height: 15.4px;
+  text-transform: uppercase;
+  background-color: #34c176;
 }
 
-@media (max-width: 454px) {
+@media (max-width: 799px) {
   .container-content {
     position: relative;
-    max-width: 454px;
+    max-width: 799px;
     padding: 250px 20px 200px 20px;
   }
   .header-grid-wrapper {
     position: absolute;
     top: 20px;
-    left: 27px;
+    left: 0px;
     z-index: 2;
+    padding: 0 20px;
     width: 100%;
     display: grid;
     grid-template: repeat(6, auto)/1fr;
@@ -277,16 +308,31 @@ body {
     margin-top: 18px;
   }
   .header-grid-wrapper .search {
-    width: 88.5%;
+    width: 100%;
   }
-  .description .form-block {
-    margin-top: 16px;
+  .description .form-block-text {
+    margin: 16px 0;
+  }
+  .description .name-mail-form-grid {
+    display: grid;
+    grid-template: repeat(3, minmax(50px, 1fr))/1fr;
+    grid-template-areas: "name" "mail" "btn";
+    gap: 24px;
+  }
+  .description .name-mail-form-grid .input-name {
+    grid-area: name;
+  }
+  .description .name-mail-form-grid .input-mail {
+    grid-area: mail;
+  }
+  .description .name-mail-form-grid .name-mail-form-grid-btn {
+    grid-area: btn;
   }
 }
-@media (min-width: 1240px) {
+@media (min-width: 800px) {
   .container-content {
     position: relative;
-    min-width: 1240px;
+    min-width: 800px;
     padding: 200px 0;
   }
   .header-grid-wrapper {
@@ -294,30 +340,43 @@ body {
     top: 25px;
     left: 0;
     z-index: 2;
-    width: 100%;
     display: grid;
-    grid-template: 1fr/8.3% 13% 53.05% 25.63%;
+    width: 100%;
+    grid-template: 1fr/8.3% 13% 30% 23.05% 25.63%;
   }
+}
+@media (min-width: 800px) and (min-width: 1440px) {
+  .header-grid-wrapper .search {
+    min-width: 248px;
+  }
+}
+@media (min-width: 800px) {
   .header-grid-wrapper .header-logo {
     grid-column: 2/3;
   }
+}
+@media (min-width: 800px) {
   .header-grid-wrapper .header-menu {
     display: grid;
     grid-column: 3/4;
-    grid-template: 1fr/auto auto auto auto;
+    grid-template: auto/repeat(4, auto);
     justify-content: start;
   }
   .header-grid-wrapper .header-menu a {
     align-self: center;
   }
+}
+@media (min-width: 800px) {
   .header-grid-wrapper .header-search {
-    grid-column: 4/-1;
-  }
-  .header-grid-wrapper .header-search .search {
-    min-width: 248px;
+    grid-column: 5/-1;
   }
   .header-grid-wrapper .header-search input {
     align-self: center;
+  }
+}
+@media (min-width: 800px) {
+  .description .form-block-text {
+    margin: 31px 0 17px 0;
   }
   .description .name-mail-form-grid {
     display: grid;
@@ -327,30 +386,6 @@ body {
     max-width: 570px;
     margin: 17px auto 0;
   }
-  .description .name-mail-form-grid input::-moz-placeholder {
-    color: #fff;
-    font-family: "Roboto Regular", sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16.4px;
-    padding-left: 20px;
-  }
-  .description .name-mail-form-grid input:-ms-input-placeholder {
-    color: #fff;
-    font-family: "Roboto Regular", sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16.4px;
-    padding-left: 20px;
-  }
-  .description .name-mail-form-grid input::placeholder {
-    color: #fff;
-    font-family: "Roboto Regular", sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16.4px;
-    padding-left: 20px;
-  }
   .description .name-mail-form-grid .input-name {
     grid-area: name;
   }
@@ -359,12 +394,5 @@ body {
   }
   .description .name-mail-form-grid-btn {
     grid-area: btn;
-    color: #fff;
-    font-family: "Roboto Regular", sans-serif;
-    font-weight: 400;
-    font-size: 13.3px;
-    line-height: 15.4px;
-    text-transform: uppercase;
-    background-color: #34c176;
   }
 }
