@@ -7,83 +7,38 @@
 }
 
 body {
+  @include font-x(400, 18px, 27px);
   color: $main-color-text;
-  font-weight: 400;
-  font-size: 18px;
-  font-family: "Roboto Regular", sans-serif;
-  line-height: 27px;
 
   background-color: $main-bg;
 }
 
-.container-content {
-  position: relative;
+.header-logo {
+  display: grid;
+  grid-template: 1fr / auto auto;
+  justify-content: start;
 
-  @media (max-width: 454px) {
-    max-width: 414px;
-  }
-
-  @media (min-width: 1240px) {
-    min-width: 1200px;
+  img {
+    align-self: center;
+    max-width: 24px;
+    max-height: 24px;
   }
 }
 
-.header {
-  position: relative;
-  z-index: 2;
-
-  display: grid;
-  grid-template: 1fr / 8.3% 13% 53.05% 25.63%;
-
-  margin-top: 25px;
-
-  &-logo {
-    display: grid;
-    grid-column: 2/3;
-    grid-template: 1fr / auto auto;
-    justify-content: start;
-
-    img {
-      align-self: center;
-      max-width: 24px;
-      max-height: 24px;
-    }
+.header-search {
+  .search {
+    min-height: 25px;
+    background-color: $dark;
+    border-radius: 50px;
   }
 
-  &-menu {
-    display: grid;
-    grid-column: 3/4;
-    grid-template: 1fr / auto auto auto auto;
-    justify-content: start;
+  input::placeholder {
+    margin: auto 0;
+    padding: 0 10px;
 
-    a {
-      align-self: center;
-    }
-  }
+    color: $arial-color;
 
-  &-search {
-    grid-column: 4/-1;
-
-    input::placeholder {
-      @include fz-13-fw-400;
-
-      margin: auto 0;
-      padding: 0 10px;
-
-      color: $arial-color;
-    }
-
-    .search {
-      min-width: 248px;
-      min-height: 25px;
-
-      background-color: $dark;
-      border-radius: 50px;
-    }
-
-    input {
-      align-self: center;
-    }
+    @include font-x(400, 13.3px, 15.4px);
   }
 }
 
@@ -91,15 +46,111 @@ body {
   position: relative;
   z-index: 2;
 
-  padding: 200px 0;
-
   text-align: center;
 
   .form-block {
-    &-text {
-      padding-top: 31px;
+    margin-top: 31px;
+  }
+}
+
+@media (max-width: 454px) {
+  .container-content {
+    position: relative;
+    max-width: 454px;
+    padding: 250px 20px 200px 20px;
+  }
+
+  .header-grid-wrapper {
+    position: absolute;
+
+    top: 20px;
+    left: 27px;
+
+    z-index: 2;
+
+    width: 100%;
+
+    display: grid;
+    grid-template: repeat(6, auto) / 1fr;
+
+    .header-logo {
+      grid-row: 1 / 2;
+      margin-bottom: 17px;
     }
 
+    .header-menu {
+      display: grid;
+      grid-row: 2 / 6;
+      grid-template: repeat(4, auto) / auto;
+    }
+
+    .header-search {
+      grid-row: 6 / -1;
+
+      margin-top: 18px;
+    }
+
+    .search {
+      width: 88.5%;
+    }
+  }
+
+  .description {
+    .form-block {
+      margin-top: 16px;
+    }
+  }
+}
+
+@media (min-width: 1240px) {
+  .container-content {
+    position: relative;
+    min-width: 1240px;
+    padding: 200px 0;
+  }
+
+  .header-grid-wrapper {
+    position: absolute;
+
+    top: 25px;
+    left: 0;
+
+    z-index: 2;
+
+    width: 100%;
+
+    display: grid;
+    grid-template: 1fr / 8.3% 13% 53.05% 25.63%;
+
+    .header-logo {
+      grid-column: 2/3;
+    }
+
+    .header-menu {
+      display: grid;
+      grid-column: 3/4;
+      grid-template: 1fr / auto auto auto auto;
+      justify-content: start;
+
+      a {
+        align-self: center;
+      }
+    }
+
+    .header-search {
+      grid-column: 4/-1;
+
+      .search {
+        min-width: 248px;
+      }
+
+      input {
+        align-self: center;
+      }
+    }
+  }
+
+  .description {
     .name-mail-form-grid {
       display: grid;
       grid-template: minmax(50px, auto) minmax(50px, auto) / minmax(273px, auto) minmax(273px, auto);
@@ -111,10 +162,9 @@ body {
       margin: 17px auto 0;
 
       input::placeholder {
-        @include fz-14-fw-700;
-        padding-left: 20px;
-
         color: #fff;
+        @include font-x(700, 14px, 16.4px);
+        padding-left: 20px;
       }
 
       .input-name {
@@ -129,10 +179,11 @@ body {
         grid-area: btn;
 
         color: #fff;
+        @include font-x(400, 13.3px, 15.4px);
+
+        text-transform: uppercase;
 
         background-color: $green;
-
-        @include fz-13-fw-400;
       }
     }
   }
