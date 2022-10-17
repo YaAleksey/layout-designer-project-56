@@ -272,7 +272,7 @@ body {
         width: 100%;
         min-height: 66px;
 
-        margin: 40px 0;
+        margin: 40px 0 0 0;
 
         border: 1px solid #fff;
         border-radius: 5px;
@@ -460,6 +460,72 @@ body {
           order: 3;
         }
       }
+    }
+  }
+}
+
+.app-title {
+  text-align: center;
+}
+
+.app-block .body .btn {
+  width: 131px;
+  height: 53px;
+
+  margin-top: 15px;
+
+  border-radius: 32px;
+  background-color: $red;
+}
+
+.app-block .image img {
+  width: 333px;
+}
+
+@media (min-width: 800px) {
+  .app-container {
+    position: relative;
+    min-width: 800px;
+    padding: 100px 120px;
+  }
+
+  .app-block {
+    display: flex;
+
+    & .body {
+      flex: 0 0 50%;
+
+      & .text {
+        padding-top: 64px;
+      }
+    }
+
+    & .image {
+      flex: 0 0 50%;
+      padding: 48px 0 0 144px;
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .app-container {
+    position: relative;
+    max-width: 799px;
+    padding: 100px 20px;
+  }
+
+  .app-block {
+    display: flex;
+    flex-direction: column;
+
+    & .body {
+      order: 2;
+    }
+
+    & .image {
+      order: 1;
+
+      margin: 48px auto 16px auto;
     }
   }
 }
