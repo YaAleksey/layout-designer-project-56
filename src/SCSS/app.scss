@@ -216,3 +216,131 @@ body {
     }
   }
 }
+
+.subscriptions-wrapper-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .subscriptions-block-grid {
+    .bg-free::before {
+      @include bg-img;
+      border-radius: 16px;
+
+      background-image: url("../images/subscribe_1.png");
+    }
+
+    .bg-standard::before {
+      @include bg-img;
+      border-radius: 16px;
+
+      background-image: url("../images/subscribe_2.png");
+    }
+
+    .bg-premium::before {
+      @include bg-img;
+      border-radius: 16px;
+
+      background-image: url("../images/subscribe_3.png");
+    }
+
+    .subscriptions-item {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding: 0 25px;
+
+      .subscriptions-item-title {
+        position: relative;
+        z-index: 2;
+      }
+
+      .subscriptions-price {
+        position: relative;
+        z-index: 2;
+
+        margin-top: 200px;
+      }
+
+      .subscriptions-btn {
+        position: relative;
+        z-index: 2;
+
+        width: 100%;
+        min-height: 66px;
+
+        margin: 40px 0;
+
+        border: 1px solid #fff;
+        border-radius: 5px;
+        background: rgb(0 0 0 / 0%);
+      }
+
+      .subscriptions-footer {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+
+        margin: 64px 0;
+      }
+    }
+  }
+
+  .subscriptions-text {
+    margin-top: 19px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 800px) {
+  .subscriptions-container {
+    position: relative;
+    min-width: 800px;
+    padding: 100px 0 0;
+
+    .subscriptions-block-grid {
+      display: grid;
+      grid-template: auto / repeat(3, 1fr);
+      gap: 50px;
+
+      margin: 45px 120px;
+
+      &.subscriptions-item {
+        grid-column: 1span;
+      }
+
+      .subscriptions-item-title {
+        margin-top: 24px;
+      }
+    }
+
+    .subscriptions-text {
+      margin: 0 120px;
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .subscriptions-container {
+    position: relative;
+    max-width: 799px;
+    padding: 100px 20px 0 20px;
+  }
+
+  .subscriptions-title {
+    margin-bottom: 45px;
+  }
+
+  .subscriptions-block-grid {
+    display: grid;
+    grid-template: repeat(3, auto) / 1fr;
+    gap: 27px;
+  }
+
+  .subscriptions-item-title {
+    margin-top: 16px;
+  }
+}

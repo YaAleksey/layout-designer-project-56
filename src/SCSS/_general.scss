@@ -124,6 +124,11 @@ h6 {
   @include font-x(400, 16px, 24px);
 }
 
+.font-subscriptions {
+  color: #fff;
+  @include font-x(400, 12.8px, 19.2px);
+}
+
 .bd {
   border: 1px solid #fff;
 }
@@ -133,7 +138,7 @@ h6 {
   padding: 0;
 }
 
-.bg::before {
+@mixin bg-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -145,11 +150,17 @@ h6 {
 
   vertical-align: middle;
 
-  background-image: url("../images/banner.png");
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   content: "";
+}
+
+.bg::before {
+  @include bg-img;
+
+  background-image: url("../images/banner.png");
 }
 
 .font-big-title {
@@ -157,7 +168,7 @@ h6 {
   text-transform: uppercase;
   @include font-x(700, 60px, 90px);
 
-  @media (max-width: 454px) {
+  @media (max-width: 799px) {
     @include font-x(700, 30px, 45px);
   }
 }
@@ -167,9 +178,31 @@ h6 {
   text-transform: uppercase;
   @include font-x(700, 38px, 57px);
 
-  @media (max-width: 454px) {
+  @media (max-width: 799px) {
     @include font-x(700, 18px, 27px);
   }
+}
+
+.font-subscriptions-title {
+  color: #fff;
+  @include font-x(400, 24px, 36px);
+  text-transform: uppercase;
+
+  @media (max-width: 799px) {
+    @include font-x(700, 16px, 24px);
+  }
+}
+
+.price-font {
+  color: #fff;
+  @include font-x(400, 64px, 64px);
+  text-transform: uppercase;
+}
+
+.font-rub {
+  color: #fff;
+  @include font-x(400, 32px, 48px);
+  text-transform: uppercase;
 }
 
 .input-field {
