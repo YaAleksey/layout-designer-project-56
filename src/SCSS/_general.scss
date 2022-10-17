@@ -205,6 +205,26 @@ h6 {
   text-transform: uppercase;
 }
 
+.font-news-title {
+  color: #fff;
+  text-transform: capitalize;
+  @include font-x(400, 30px, 45px);
+
+  @media (max-width: 1050px) {
+    @include font-x(400, 16px, 24px);
+  }
+}
+
+.font-logo {
+  color: $main-color-text;
+  text-transform: uppercase;
+  @include font-x(400, 12.8px, 150%);
+
+  .orange-mark {
+    color: $orange;
+  }
+}
+
 .input-field {
   background: rgb(0 0 0 / 0%);
   border: 2px solid $main-color-text;

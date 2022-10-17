@@ -216,6 +216,35 @@ h6 {
   text-transform: uppercase;
 }
 
+.font-news-title {
+  color: #fff;
+  text-transform: capitalize;
+  font-family: "Roboto Regular", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+}
+@media (max-width: 1050px) {
+  .font-news-title {
+    font-family: "Roboto Regular", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.font-logo {
+  color: #cacaca;
+  text-transform: uppercase;
+  font-family: "Roboto Regular", sans-serif;
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 150%;
+}
+.font-logo .orange-mark {
+  color: #f89202;
+}
+
 .input-field {
   background: rgba(0, 0, 0, 0);
   border: 2px solid #cacaca;
@@ -565,5 +594,100 @@ body {
   }
   .subscriptions-item-title {
     margin-top: 16px;
+  }
+}
+.news-title {
+  text-align: center;
+}
+
+.news-block-grid {
+  display: grid;
+  grid-template: 1fr 1fr/1fr;
+  gap: 65px;
+  width: 100%;
+  margin-top: 48px;
+}
+
+.news-item {
+  display: grid;
+  grid-template: auto/minmax(50%, 50%) minmax(50%, 50%);
+}
+.news-item img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.news-item .body {
+  display: flex;
+  flex-direction: column;
+}
+.news-item .body .title {
+  margin: 0 0 30px 0;
+}
+.news-item .body .description {
+  text-align: start;
+}
+.news-item .body .logo-date {
+  display: grid;
+  grid-template: auto/repeat(3, auto);
+  gap: 16px;
+  margin: 24px 0 0;
+  justify-content: start;
+}
+.news-item .body .logo-date img {
+  align-self: center;
+  width: 19px;
+  height: 19px;
+}
+.news-item .body .btn {
+  width: 135px;
+  height: 53px;
+  margin-top: 48px;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+}
+
+@media (min-width: 800px) {
+  .news-container {
+    position: relative;
+    min-width: 800px;
+    padding: 100px 120px 0 120px;
+  }
+  .news-item .body {
+    margin: 0 50px 0 0;
+  }
+  .news-item .body:nth-child(2n) {
+    margin: 0 0 0 50px;
+  }
+}
+@media (max-width: 799px) {
+  .news-container {
+    position: relative;
+    max-width: 799px;
+    padding: 100px 20px 0 20px;
+  }
+  .news-item {
+    display: grid;
+    grid-template: auto auto/minmax(100%, 100%);
+  }
+  .news-item img {
+    order: 1;
+  }
+  .news-item .body {
+    order: 2;
+  }
+  .news-item .body .title {
+    margin: 50px 0 16px 0;
+  }
+  .news-item .body .logo-date img {
+    order: 1;
+  }
+  .news-item .body .logo-date .logo {
+    order: 2;
+  }
+  .news-item .body .logo-date .date {
+    order: 3;
   }
 }
