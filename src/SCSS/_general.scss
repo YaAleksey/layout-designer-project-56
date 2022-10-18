@@ -225,12 +225,20 @@ h6 {
   }
 }
 
+.font-footer-title {
+  color: #fff;
+  text-transform: uppercase;
+  @include font-x(700, 18px, 27px);
+}
+
 .input-field {
   background: rgb(0 0 0 / 0%);
   border: 2px solid $main-color-text;
   border-radius: 3px;
 }
 
-.bord-rad-5 {
-  border-radius: 5px;
+@mixin addapting-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
