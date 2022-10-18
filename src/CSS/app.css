@@ -72,24 +72,8 @@ h6 {
   font-size: inherit;
 }
 
-.overfl-hidd {
-  overflow: hidden;
-}
-
 .uppcase {
   text-transform: uppercase;
-}
-
-.mg-l-16 {
-  margin: 0 0 0 16px;
-}
-
-.mg-r-24 {
-  margin: 0 24px 0 0;
-}
-
-.gr-vert-center {
-  align-self: center;
 }
 
 .font-menu {
@@ -273,23 +257,57 @@ body {
   background-color: #08020d;
 }
 
-.header-logo {
+.description-content {
+  position: relative;
+  padding: 200px 120px;
+}
+
+.header-wrapper {
+  position: absolute;
+  z-index: 2;
+  top: 25px;
+  left: 120px;
+  display: grid;
+  grid-template: auto/auto 0.5fr auto 1fr 248px;
+  grid-template-areas: "logo . menu . search";
+  align-content: center;
+  width: 80%;
+}
+.header-wrapper .header-logo {
+  grid-area: logo;
   display: grid;
   grid-template: 1fr/auto auto;
   justify-content: start;
 }
-.header-logo img {
+.header-wrapper .header-logo .image {
   align-self: center;
   max-width: 24px;
   max-height: 24px;
 }
-
-.header-search .search {
+.header-wrapper .header-logo .text {
+  align-self: center;
+  margin-left: 16px;
+  white-space: nowrap;
+}
+.header-wrapper .header-menu {
+  grid-area: menu;
+}
+.header-wrapper .header-search {
+  grid-area: search;
+}
+.header-wrapper .header-search .search {
+  width: 100%;
   min-height: 25px;
   background-color: #3c3b3d;
   border-radius: 50px;
 }
-.header-search input::-moz-placeholder {
+.header-wrapper .header-search input {
+  color: #fff;
+  font-weight: 600;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.header-wrapper .header-search input::-moz-placeholder {
   margin: auto 0;
   padding: 0 10px;
   color: #757575;
@@ -298,7 +316,7 @@ body {
   font-size: 13.3px;
   line-height: 15.4px;
 }
-.header-search input:-ms-input-placeholder {
+.header-wrapper .header-search input:-ms-input-placeholder {
   margin: auto 0;
   padding: 0 10px;
   color: #757575;
@@ -307,7 +325,7 @@ body {
   font-size: 13.3px;
   line-height: 15.4px;
 }
-.header-search input::placeholder {
+.header-wrapper .header-search input::placeholder {
   margin: auto 0;
   padding: 0 10px;
   color: #757575;
@@ -322,31 +340,50 @@ body {
   z-index: 2;
   text-align: center;
 }
-.description input::-moz-placeholder {
+.description .form-block-text {
+  margin: 31px 0 17px 0;
+}
+.description .main-form input {
+  color: #fff;
+  font-weight: 600;
+  padding-right: 22px;
+  padding-left: 22px;
+}
+.description .main-form input::-moz-placeholder {
   color: #fff;
   font-family: "Roboto Regular", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16.4px;
   padding-left: 22px;
+  padding-right: 22px;
 }
-.description input:-ms-input-placeholder {
+.description .main-form input:-ms-input-placeholder {
   color: #fff;
   font-family: "Roboto Regular", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16.4px;
   padding-left: 22px;
+  padding-right: 22px;
 }
-.description input::placeholder {
+.description .main-form input::placeholder {
   color: #fff;
   font-family: "Roboto Regular", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16.4px;
   padding-left: 22px;
+  padding-right: 22px;
 }
-.description .name-mail-form-grid-btn {
+.description .main-form .input-name {
+  grid-area: name;
+}
+.description .main-form .input-mail {
+  grid-area: mail;
+}
+.description .main-form-btn {
+  grid-area: btn;
   color: #fff;
   font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
@@ -357,121 +394,116 @@ body {
   border-radius: 5px;
 }
 
+@media (max-width: 1439px) {
+  .main-form {
+    display: grid;
+    justify-content: center;
+    grid-template: minmax(50px, auto) minmax(50px, auto)/minmax(auto, 273px) minmax(auto, 273px);
+    grid-template-areas: "name mail" "btn btn";
+    gap: 24px;
+    margin: 17px auto 0;
+  }
+  .main-form .input-name {
+    grid-area: name;
+  }
+  .main-form .input-mail {
+    grid-area: mail;
+  }
+  .main-form .btn {
+    grid-area: btn;
+  }
+}
 @media (max-width: 799px) {
-  .container-content {
+  .description-content {
     position: relative;
     max-width: 799px;
     padding: 250px 20px 200px 20px;
   }
-  .header-grid-wrapper {
-    position: absolute;
-    top: 20px;
-    left: 0px;
-    z-index: 2;
-    padding: 0 20px;
-    width: 100%;
+  .header-wrapper {
     display: grid;
     grid-template: repeat(6, auto)/1fr;
+    grid-template-areas: "logo" "menu" "menu" "menu" "menu" "search";
+    top: 27px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
   }
-  .header-grid-wrapper .header-logo {
-    grid-row: 1/2;
+  .header-wrapper .header-logo {
+    grid-area: logo;
     margin-bottom: 17px;
   }
-  .header-grid-wrapper .header-menu {
+  .header-wrapper .header-menu {
+    grid-area: menu;
     display: grid;
-    grid-row: 2/6;
     grid-template: repeat(4, auto)/auto;
   }
-  .header-grid-wrapper .header-search {
-    grid-row: 6/-1;
+  .header-wrapper .header-search {
+    grid-area: search;
     margin-top: 18px;
   }
-  .header-grid-wrapper .search {
-    width: 100%;
-  }
-  .description .form-block-text {
+  .description .form-block .form-block-text {
     margin: 16px 0;
   }
-  .description .name-mail-form-grid {
+  .main-form {
     display: grid;
     grid-template: repeat(3, minmax(50px, 1fr))/1fr;
     grid-template-areas: "name" "mail" "btn";
     gap: 24px;
   }
-  .description .name-mail-form-grid .input-name {
+  .main-form .input-name {
     grid-area: name;
   }
-  .description .name-mail-form-grid .input-mail {
+  .main-form .input-mail {
     grid-area: mail;
   }
-  .description .name-mail-form-grid .name-mail-form-grid-btn {
+  .main-form .main-form-btn {
     grid-area: btn;
   }
 }
-@media (min-width: 800px) {
-  .container-content {
+@media (min-width: 1440px) {
+  .description-content {
     position: relative;
-    min-width: 800px;
-    padding: 200px 0;
+    min-width: 1440px;
   }
-  .header-grid-wrapper {
-    position: absolute;
-    top: 25px;
-    left: 0;
-    z-index: 2;
+  .header-wrapper {
     display: grid;
-    width: 100%;
-    grid-template: 1fr/8.3% 13% 30% 23.05% 25.63%;
+    grid-template: auto/auto 90px auto 450px 248px;
+    grid-template-areas: "logo . menu . search";
+    align-content: center;
   }
-}
-@media (min-width: 800px) and (min-width: 1440px) {
-  .header-grid-wrapper .search {
-    min-width: 248px;
+  .header-wrapper .header-logo {
+    grid-area: logo;
   }
-}
-@media (min-width: 800px) {
-  .header-grid-wrapper .header-logo {
-    grid-column: 2/3;
-  }
-}
-@media (min-width: 800px) {
-  .header-grid-wrapper .header-menu {
+  .header-wrapper .header-menu {
     display: grid;
-    grid-column: 3/4;
+    grid-area: menu;
     grid-template: auto/repeat(4, auto);
-    justify-content: start;
+    gap: 24px;
   }
-  .header-grid-wrapper .header-menu a {
+  .header-wrapper .header-menu a {
     align-self: center;
   }
-}
-@media (min-width: 800px) {
-  .header-grid-wrapper .header-search {
-    grid-column: 5/-1;
+  .header-wrapper .header-search {
+    grid-area: search;
   }
-  .header-grid-wrapper .header-search input {
+  .header-wrapper .header-search input {
     align-self: center;
   }
-}
-@media (min-width: 800px) {
-  .description .form-block-text {
-    margin: 31px 0 17px 0;
-  }
-  .description .name-mail-form-grid {
+  .main-form {
     display: grid;
+    justify-content: center;
     grid-template: minmax(50px, auto) minmax(50px, auto)/minmax(273px, auto) minmax(273px, auto);
     grid-template-areas: "name mail" "btn btn";
     gap: 24px;
-    max-width: 570px;
-    margin: 17px auto 0;
+    margin-top: 17px;
   }
-  .description .name-mail-form-grid .input-name {
+  .main-form .input-name {
     grid-area: name;
   }
-  .description .name-mail-form-grid .input-mail {
+  .main-form .input-mail {
     grid-area: mail;
   }
-  .description .name-mail-form-grid-btn {
+  .main-form .btn {
     grid-area: btn;
   }
 }

@@ -76,24 +76,8 @@ h6 {
   font-size: inherit;
 }
 
-.overfl-hidd {
-  overflow: hidden;
-}
-
 .uppcase {
   text-transform: uppercase;
-}
-
-.mg-l-16 {
-  margin: 0 0 0 16px;
-}
-
-.mg-r-24 {
-  margin: 0 24px 0 0;
-}
-
-.gr-vert-center {
-  align-self: center;
 }
 
 @mixin font-x($fw, $fz, $lh) {
