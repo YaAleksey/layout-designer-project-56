@@ -1,3 +1,4 @@
+//-------------------------------------------------------------CLEAN STANDARD STYLES----------------------------------------------------------------------------
 @import "_variable";
 
 @font-face {
@@ -75,7 +76,7 @@ h6 {
   font-weight: 400;
   font-size: inherit;
 }
-
+//-------------------------------------------------------------MAiN-PAGE GENERAL STYLES----------------------------------------------------------------------------
 .uppcase {
   text-transform: uppercase;
 }
@@ -225,4 +226,19 @@ h6 {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
+}
+
+//-------------------------------------------------------------ARTISTS GENERAL STYLES----------------------------------------------------------------------------
+
+.art-bg::before {
+  @include bg-img;
+
+  background-image: url("../images/Morten\ Harket.png");
+}
+
+@mixin btn-style-x($bg-col, $bd-radius) {
+  width: 100%;
+  height: 100%;
+  background-color: $bg-col;
+  border-radius: $bd-radius;
 }

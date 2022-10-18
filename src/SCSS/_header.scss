@@ -1,0 +1,138 @@
+.header-wrapper {
+  position: absolute;
+
+  z-index: 2;
+
+  top: 25px;
+  left: 120px;
+
+  display: grid;
+  grid-template: auto / auto 0.5fr auto 1fr 248px;
+  grid-template-areas: "logo . menu . search";
+  align-content: center;
+  width: 80%;
+
+  .header-logo {
+    grid-area: logo;
+
+    display: grid;
+    grid-template: 1fr / auto auto;
+    justify-content: start;
+
+    & .image {
+      align-self: center;
+      max-width: 24px;
+      max-height: 24px;
+    }
+
+    & .text {
+      align-self: center;
+      margin-left: 16px;
+
+      white-space: nowrap;
+    }
+  }
+
+  .header-menu {
+    grid-area: menu;
+  }
+
+  .header-search {
+    grid-area: search;
+
+    .search {
+      width: 100%;
+      min-height: 25px;
+      background-color: $dark;
+      border-radius: 50px;
+    }
+
+    input {
+      color: #fff;
+      font-weight: 600;
+
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    input::placeholder {
+      margin: auto 0;
+      padding: 0 10px;
+
+      color: $arial-color;
+
+      @include font-x(400, 13.3px, 15.4px);
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .header-wrapper {
+    display: grid;
+    grid-template: repeat(6, auto) / 1fr;
+    grid-template-areas:
+      "logo"
+      "menu"
+      "menu"
+      "menu"
+      "menu"
+      "search";
+
+    top: 27px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 0 20px;
+
+    .header-logo {
+      grid-area: logo;
+      margin-bottom: 17px;
+    }
+
+    .header-menu {
+      grid-area: menu;
+
+      display: grid;
+      grid-template: repeat(4, auto) / auto;
+    }
+
+    .header-search {
+      grid-area: search;
+
+      margin-top: 18px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .header-wrapper {
+    display: grid;
+    grid-template: auto / auto 90px auto 450px 248px;
+    grid-template-areas: "logo . menu . search";
+    align-content: center;
+
+    .header-logo {
+      grid-area: logo;
+    }
+
+    .header-menu {
+      display: grid;
+      grid-area: menu;
+      grid-template: auto / repeat(4, auto);
+      gap: 24px;
+
+      a {
+        align-self: center;
+      }
+    }
+
+    .header-search {
+      grid-area: search;
+
+      input {
+        align-self: center;
+      }
+    }
+  }
+}
