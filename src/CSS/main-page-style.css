@@ -259,6 +259,10 @@ h6 {
   background-image: url("../images/Morten Harket.png");
 }
 
+.fw700 {
+  font-weight: 700;
+}
+
 .header-wrapper {
   position: absolute;
   z-index: 2;

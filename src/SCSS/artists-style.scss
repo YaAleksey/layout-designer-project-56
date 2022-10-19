@@ -3,6 +3,10 @@
 @import "_header";
 @import "_footer";
 
+body {
+  background-color: $main-bg;
+}
+
 .art-main-title {
   position: relative;
   z-index: 2;
@@ -81,5 +85,63 @@
     min-width: 1440px;
     position: relative;
     padding: 250px 120px 223px 120px;
+  }
+}
+
+.art-tracks-content {
+  .tracks-title {
+    margin-bottom: 48px;
+  }
+}
+
+.tracks-block {
+  .column {
+    display: grid;
+    grid-template: auto-fill / 1fr;
+    gap: 25px;
+
+    .track-body {
+      display: flex;
+      justify-content: space-between;
+
+      .track-info {
+        display: grid;
+        grid-template: auto / auto auto;
+        gap: 15px;
+
+        .name-art-info {
+          align-self: center;
+        }
+      }
+
+      & .light {
+        align-self: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .art-tracks-content {
+    max-width: 799px;
+    position: relative;
+    padding: 100px 20px 0 20px;
+  }
+
+  .tracks-block {
+    display: grid;
+    grid-template: auto-fill / 1fr;
+    gap: 25px;
+  }
+}
+
+@media (min-width: 800px) {
+  .art-tracks-content {
+    min-width: 800px;
+    position: relative;
+    padding: 100px 170px 0 120px;
+  }
+  .tracks-block {
+    @include two-columns-grid(49px);
   }
 }

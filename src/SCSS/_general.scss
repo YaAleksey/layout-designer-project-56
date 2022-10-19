@@ -242,3 +242,17 @@ h6 {
   background-color: $bg-col;
   border-radius: $bd-radius;
 }
+
+@mixin two-columns-grid($gap-value) {
+  display: grid;
+  grid-template: auto / 1fr 1fr;
+  gap: $gap-value;
+
+  .column {
+    grid-template-columns: 1span;
+  }
+}
+
+.fw700 {
+  font-weight: 700;
+}

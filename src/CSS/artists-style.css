@@ -259,6 +259,10 @@ h6 {
   background-image: url("../images/Morten Harket.png");
 }
 
+.fw700 {
+  font-weight: 700;
+}
+
 .header-wrapper {
   position: absolute;
   z-index: 2;
@@ -479,6 +483,10 @@ h6 {
     border-top: 1px solid #cacaca;
   }
 }
+body {
+  background-color: #08020d;
+}
+
 .art-main-title {
   position: relative;
   z-index: 2;
@@ -551,5 +559,57 @@ h6 {
     min-width: 1440px;
     position: relative;
     padding: 250px 120px 223px 120px;
+  }
+}
+.art-tracks-content .tracks-title {
+  margin-bottom: 48px;
+}
+
+.tracks-block .column {
+  display: grid;
+  grid-template: auto-fill/1fr;
+  gap: 25px;
+}
+.tracks-block .column .track-body {
+  display: flex;
+  justify-content: space-between;
+}
+.tracks-block .column .track-body .track-info {
+  display: grid;
+  grid-template: auto/auto auto;
+  gap: 15px;
+}
+.tracks-block .column .track-body .track-info .name-art-info {
+  align-self: center;
+}
+.tracks-block .column .track-body .light {
+  align-self: center;
+}
+
+@media (max-width: 799px) {
+  .art-tracks-content {
+    max-width: 799px;
+    position: relative;
+    padding: 100px 20px 0 20px;
+  }
+  .tracks-block {
+    display: grid;
+    grid-template: auto-fill/1fr;
+    gap: 25px;
+  }
+}
+@media (min-width: 800px) {
+  .art-tracks-content {
+    min-width: 800px;
+    position: relative;
+    padding: 100px 170px 0 120px;
+  }
+  .tracks-block {
+    display: grid;
+    grid-template: auto/1fr 1fr;
+    gap: 49px;
+  }
+  .tracks-block .column {
+    grid-template-columns: 1span;
   }
 }
