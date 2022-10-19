@@ -139,7 +139,7 @@ body {
   .art-tracks-content {
     min-width: 800px;
     position: relative;
-    padding: 100px 170px 0 120px;
+    padding: 100px 50px 0 50px;
   }
   .tracks-block {
     @include two-columns-grid(49px);
@@ -187,7 +187,7 @@ body {
   .sames-content {
     min-width: 800px;
     position: relative;
-    padding: 100px 170px 0 120px;
+    padding: 100px 50px 0 50px;
 
     .items {
       .img-title-text {
@@ -197,10 +197,6 @@ body {
         }
       }
     }
-  }
-
-  .sames-content {
-    padding-bottom: 100px;
   }
 }
 
@@ -219,9 +215,5 @@ body {
         }
       }
     }
-  }
-
-  .sames-content {
-    padding-bottom: 100px;
   }
 }
