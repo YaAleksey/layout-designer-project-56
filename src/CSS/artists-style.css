@@ -605,7 +605,7 @@ body {
 @media (min-width: 800px) {
   .art-tracks-content {
     max-width: 1240px;
-    padding: 100px 40px 0 40px;
+    padding: 100px 20px 0 20px;
   }
   .tracks-block {
     display: grid;
@@ -654,7 +654,7 @@ body {
   .albums-content,
 .sames-content {
     max-width: 1240px;
-    padding: 100px 40px 0 40px;
+    padding: 100px 20px 0 20px;
   }
   .albums-content .items .img-title-text img,
 .sames-content .items .img-title-text img {
