@@ -604,7 +604,7 @@ body {
 }
 @media (min-width: 800px) {
   .art-tracks-content {
-    min-width: 800px;
+    max-width: 1240px;
     padding: 100px 40px 0 40px;
   }
   .tracks-block {
@@ -653,7 +653,7 @@ body {
 @media (min-width: 800px) {
   .albums-content,
 .sames-content {
-    min-width: 800px;
+    max-width: 1240px;
     padding: 100px 40px 0 40px;
   }
   .albums-content .items .img-title-text img,
