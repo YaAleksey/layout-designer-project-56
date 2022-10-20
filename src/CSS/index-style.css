@@ -594,7 +594,7 @@ body {
   }
   .main-form {
     display: grid;
-    grid-template: repeat(3, minmax(50px, 1fr))/1fr;
+    grid-template: repeat(2, minmax(50px, 1fr)) 57px/1fr;
     grid-template-areas: "name" "mail" "btn";
     gap: 24px;
   }
@@ -696,6 +696,10 @@ body {
   position: relative;
   z-index: 2;
   margin-top: 200px;
+}
+.subscriptions-wrapper-flex .subscriptions-block-grid .subscriptions-item .subscriptions-price .align-rub {
+  vertical-align: top;
+  margin-left: 16px;
 }
 .subscriptions-wrapper-flex .subscriptions-block-grid .subscriptions-item .subscriptions-btn {
   position: relative;
@@ -815,10 +819,10 @@ body {
     padding: 102px 20px 0 20px;
   }
   .news-item .body {
-    margin: 0 50px 0 0;
+    margin: 0 25px 0 0;
   }
   .news-item .body:nth-child(2n) {
-    margin: 0 0 0 50px;
+    margin: 0 0 0 25px;
   }
 }
 @media (max-width: 799px) {
@@ -858,7 +862,6 @@ body {
   width: 131px;
   height: 53px;
   margin-top: 15px;
-  margin-bottom: 2px;
   border-radius: 32px;
   background-color: #95390c;
 }
@@ -902,6 +905,9 @@ body {
   }
   .app-block .body {
     order: 2;
+  }
+  .app-block .body .text p {
+    margin-top: 16px;
   }
   .app-block .image {
     order: 1;

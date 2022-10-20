@@ -118,7 +118,7 @@ body {
 
   .main-form {
     display: grid;
-    grid-template: repeat(3, minmax(50px, 1fr)) / 1fr;
+    grid-template: repeat(2, minmax(50px, 1fr)) 57px / 1fr;
     grid-template-areas:
       "name"
       "mail"
@@ -201,6 +201,11 @@ body {
         z-index: 2;
 
         margin-top: 200px;
+
+        .align-rub {
+          vertical-align: top;
+          margin-left: 16px;
+        }
       }
 
       .subscriptions-btn {
@@ -296,7 +301,7 @@ body {
   display: grid;
   grid-template: auto / minmax(50%, 50%) minmax(50%, 50%);
 
-  img {
+  & img {
     @include addapting-img;
   }
 
@@ -350,12 +355,12 @@ body {
 
   .news-item {
     .body {
-      margin: 0 50px 0 0;
+      margin: 0 25px 0 0;
     }
   }
 
   .news-item .body:nth-child(2n) {
-    margin: 0 0 0 50px;
+    margin: 0 0 0 25px;
   }
 }
 
@@ -405,7 +410,6 @@ body {
   height: 53px;
 
   margin-top: 15px;
-  margin-bottom: 2px;
 
   border-radius: 32px;
   background-color: $red;
@@ -453,6 +457,12 @@ body {
 
     & .body {
       order: 2;
+
+      & .text {
+        p {
+          margin-top: 16px;
+        }
+      }
     }
 
     & .image {
