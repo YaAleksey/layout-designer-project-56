@@ -41,8 +41,6 @@ body {
     input::placeholder {
       color: #fff;
       @include font-x(700, 14px, 16.4px);
-      padding-left: 22px;
-      padding-right: 22px;
     }
 
     .input-name {
@@ -301,10 +299,6 @@ body {
   display: grid;
   grid-template: auto / 50% 50%;
 
-  & img {
-    @include addapting-img;
-  }
-
   & .body {
     display: flex;
     flex-direction: column;
@@ -354,14 +348,11 @@ body {
   }
 
   .news-item {
-    gap: 50px;
-    .body {
-      //margin: 0 25px 0 0;
-    }
-  }
+    gap: 30px;
 
-  .news-item .body:nth-child(2n) {
-    //margin: 0 0 0 25px;
+    & img {
+      width: 575px;
+    }
   }
 }
 
@@ -378,6 +369,8 @@ body {
 
     img {
       order: 1;
+
+      @include addapting-img;
     }
 
     .body {
