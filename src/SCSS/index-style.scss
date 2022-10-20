@@ -290,7 +290,7 @@ body {
 .news-block-grid {
   display: grid;
   grid-template: 1fr 1fr / 1fr;
-  gap: 65px;
+  gap: 67px;
 
   width: 100%;
   margin-top: 48px;
@@ -422,7 +422,7 @@ body {
   .app-container {
     position: relative;
     max-width: 1200px;
-    padding: 100px 120px;
+    padding: 100px 20px 0;
   }
 
   .app-block {
@@ -447,7 +447,7 @@ body {
   .app-container {
     position: relative;
     max-width: 799px;
-    padding: 100px 20px;
+    padding: 100px 20px 0;
   }
 
   .app-block {
