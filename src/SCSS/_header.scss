@@ -95,6 +95,7 @@
 
       display: grid;
       grid-template: repeat(4, auto) / auto;
+      gap: 3px;
     }
 
     .header-search {

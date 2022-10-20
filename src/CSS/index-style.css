@@ -358,6 +358,7 @@ h6 {
     grid-area: menu;
     display: grid;
     grid-template: repeat(4, auto)/auto;
+    gap: 3px;
   }
   .header-wrapper .header-search {
     grid-area: search;
@@ -502,7 +503,7 @@ body {
 
 .description-content {
   position: relative;
-  padding: 200px 120px 205px;
+  padding: 200px 120px 200px;
 }
 
 .description {
@@ -748,12 +749,12 @@ body {
     padding: 100px 20px 0 20px;
   }
   .subscriptions-title {
-    margin-bottom: 45px;
+    margin-bottom: 46px;
   }
   .subscriptions-block-grid {
     display: grid;
     grid-template: repeat(3, auto)/1fr;
-    gap: 50px;
+    gap: 48px;
   }
   .subscriptions-item-title {
     margin-top: 16px;
@@ -817,12 +818,6 @@ body {
     position: relative;
     max-width: 1240px;
     padding: 102px 20px 0 20px;
-  }
-  .news-item .body {
-    margin: 0 25px 0 0;
-  }
-  .news-item .body:nth-child(2n) {
-    margin: 0 0 0 25px;
   }
 }
 @media (max-width: 799px) {

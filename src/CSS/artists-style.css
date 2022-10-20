@@ -358,6 +358,7 @@ h6 {
     grid-area: menu;
     display: grid;
     grid-template: repeat(4, auto)/auto;
+    gap: 3px;
   }
   .header-wrapper .header-search {
     grid-area: search;

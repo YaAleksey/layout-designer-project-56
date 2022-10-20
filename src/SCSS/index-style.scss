@@ -17,7 +17,7 @@ body {
 
 .description-content {
   position: relative;
-  padding: 200px 120px 205px;
+  padding: 200px 120px 200px;
 }
 
 .description {
@@ -270,13 +270,13 @@ body {
   }
 
   .subscriptions-title {
-    margin-bottom: 45px;
+    margin-bottom: 46px;
   }
 
   .subscriptions-block-grid {
     display: grid;
     grid-template: repeat(3, auto) / 1fr;
-    gap: 50px;
+    gap: 48px;
   }
 
   .subscriptions-item-title {
@@ -355,12 +355,12 @@ body {
 
   .news-item {
     .body {
-      margin: 0 25px 0 0;
+      //margin: 0 25px 0 0;
     }
   }
 
   .news-item .body:nth-child(2n) {
-    margin: 0 0 0 25px;
+    //margin: 0 0 0 25px;
   }
 }
 
