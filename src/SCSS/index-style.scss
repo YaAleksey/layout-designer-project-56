@@ -78,13 +78,13 @@ body {
     grid-area: mail;
   }
 
-  & .btn {
+  .main-form-btn {
     grid-area: btn;
   }
 
   @content;
 
-  grid-template: minmax(50px, auto) minmax(50px, auto) / minmax($min-wd-col1, $max-wd-col1) minmax(
+  grid-template: minmax(50px, auto) minmax(57px, auto) / minmax($min-wd-col1, $max-wd-col1) minmax(
       $min-wd-col2,
       $max-wd-col2
     );
@@ -228,23 +228,23 @@ body {
   }
 
   .subscriptions-text {
-    margin-top: 19px;
     text-align: center;
+    margin-top: 40px;
   }
 }
 
 @media (min-width: 800px) {
   .subscriptions-container {
     position: relative;
-    max-width: 1200px;
-    padding: 100px 0 0;
+    max-width: 1240px;
+    padding: 100px 20px 0;
 
     .subscriptions-block-grid {
       display: grid;
       grid-template: auto / repeat(3, 1fr);
       gap: 50px;
 
-      margin: 45px 120px;
+      margin-top: 45px;
 
       &.subscriptions-item {
         grid-column: 1span;
@@ -253,10 +253,6 @@ body {
       .subscriptions-item-title {
         margin-top: 24px;
       }
-    }
-
-    .subscriptions-text {
-      margin: 0 120px;
     }
   }
 }
@@ -275,7 +271,7 @@ body {
   .subscriptions-block-grid {
     display: grid;
     grid-template: repeat(3, auto) / 1fr;
-    gap: 27px;
+    gap: 50px;
   }
 
   .subscriptions-item-title {
@@ -348,8 +344,8 @@ body {
 @media (min-width: 800px) {
   .news-container {
     position: relative;
-    max-width: 1200px;
-    padding: 100px 20px 0 20px;
+    max-width: 1240px;
+    padding: 102px 20px 0 20px;
   }
 
   .news-item {
@@ -409,6 +405,7 @@ body {
   height: 53px;
 
   margin-top: 15px;
+  margin-bottom: 2px;
 
   border-radius: 32px;
   background-color: $red;
@@ -421,7 +418,7 @@ body {
 @media (min-width: 800px) {
   .app-container {
     position: relative;
-    max-width: 1200px;
+    max-width: 1240px;
     padding: 100px 20px 0;
   }
 
