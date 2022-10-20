@@ -162,21 +162,21 @@ body {
 
   .subscriptions-block-grid {
     .bg-free::before {
-      @include bg-img;
+      @include bg-img-without-align;
       border-radius: 16px;
 
       background-image: url("../images/subscribe_1.png");
     }
 
     .bg-standard::before {
-      @include bg-img;
+      @include bg-img-without-align;
       border-radius: 16px;
 
       background-image: url("../images/subscribe_2.png");
     }
 
     .bg-premium::before {
-      @include bg-img;
+      @include bg-img-without-align;
       border-radius: 16px;
 
       background-image: url("../images/subscribe_3.png");
