@@ -137,9 +137,9 @@ body {
 
 @media (min-width: 800px) {
   .art-tracks-content {
-    min-width: 800px;
+    max-width: 1200px;
     position: relative;
-    padding: 100px 50px 0 50px;
+    padding: 100px 0 0 50px;
   }
   .tracks-block {
     @include two-columns-grid(49px);
@@ -185,9 +185,9 @@ body {
 @media (min-width: 800px) {
   .albums-content,
   .sames-content {
-    min-width: 800px;
+    max-width: 1200px;
     position: relative;
-    padding: 100px 50px 0 50px;
+    padding: 100px 0 0 50px;
 
     .items {
       .img-title-text {
