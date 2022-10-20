@@ -315,6 +315,7 @@ h6 {
 .header-wrapper .header-search input::-moz-placeholder {
   margin: auto 0;
   padding: 0 10px;
+  text-transform: uppercase;
   color: #757575;
   font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
@@ -324,6 +325,7 @@ h6 {
 .header-wrapper .header-search input:-ms-input-placeholder {
   margin: auto 0;
   padding: 0 10px;
+  text-transform: uppercase;
   color: #757575;
   font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
@@ -333,6 +335,7 @@ h6 {
 .header-wrapper .header-search input::placeholder {
   margin: auto 0;
   padding: 0 10px;
+  text-transform: uppercase;
   color: #757575;
   font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
