@@ -413,7 +413,7 @@ h6 {
 }
 
 .footer-menu {
-  padding: 40px 0 48px 0;
+  padding: 40px 0 50px 0;
 }
 
 .footer-wrapper {
@@ -502,7 +502,7 @@ body {
 
 .description-content {
   position: relative;
-  padding: 200px 120px;
+  padding: 200px 120px 205px;
 }
 
 .description {
@@ -587,7 +587,7 @@ body {
   .description-content {
     position: relative;
     max-width: 799px;
-    padding: 250px 20px 200px 20px;
+    padding: 250px 20px 205px 20px;
   }
   .description .form-block .form-block-text {
     margin: 16px 0;
@@ -721,7 +721,7 @@ body {
 @media (min-width: 800px) {
   .subscriptions-container {
     position: relative;
-    min-width: 800px;
+    max-width: 1200px;
     padding: 100px 0 0;
   }
   .subscriptions-container .subscriptions-block-grid {
@@ -814,8 +814,8 @@ body {
 @media (min-width: 800px) {
   .news-container {
     position: relative;
-    min-width: 800px;
-    padding: 100px 120px 0 120px;
+    max-width: 1200px;
+    padding: 100px 20px 0 20px;
   }
   .news-item .body {
     margin: 0 50px 0 0;
@@ -875,7 +875,7 @@ body {
 @media (min-width: 800px) {
   .app-container {
     position: relative;
-    min-width: 800px;
+    max-width: 1200px;
     padding: 100px 120px;
   }
   .app-block {
