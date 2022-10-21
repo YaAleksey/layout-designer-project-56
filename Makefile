@@ -3,8 +3,8 @@ install:
 
 lint:
 	npx htmlhint ./src/*.html
-	npx stylelint --fix ./src/SCSS/*.scss
-	npx stylelint --fix ./src/CSS/*.css
+	npx stylelint ./src/SCSS/*.scss
+	npx stylelint ./src/CSS/*.css
 
 deploy:
 	npx surge ./src/
