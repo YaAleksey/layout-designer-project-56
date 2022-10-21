@@ -348,10 +348,16 @@ body {
   }
 
   .news-item {
-    gap: 30px;
+    gap: 25px;
 
     & img {
       width: 575px;
+    }
+
+    & .hex-layout {
+      .logo-date {
+        margin-top: 15px;
+      }
     }
   }
 }

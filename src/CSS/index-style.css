@@ -805,10 +805,13 @@ body {
     padding: 102px 20px 0 20px;
   }
   .news-item {
-    gap: 30px;
+    gap: 25px;
   }
   .news-item img {
     width: 575px;
+  }
+  .news-item .hex-layout .logo-date {
+    margin-top: 15px;
   }
 }
 @media (max-width: 799px) {
