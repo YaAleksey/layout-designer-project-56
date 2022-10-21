@@ -528,6 +528,9 @@ body {
   background-color: #5328a1;
   border-radius: 5px;
 }
+.art-main-buttons .btn-mix img {
+  filter: invert(1);
+}
 .art-main-buttons .btn-mix button {
   margin-left: 22px;
   background: rgba(0, 0, 0, 0);
@@ -540,6 +543,9 @@ body {
   height: 100%;
   background-color: #95390c;
   border-radius: 5px;
+}
+.art-main-buttons .btn-unicum img {
+  filter: invert(1);
 }
 .art-main-buttons .btn-unicum button {
   margin-left: 16px;

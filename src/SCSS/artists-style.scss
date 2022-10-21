@@ -35,6 +35,10 @@ body {
 
     @include btn-style-x($purple, 5px);
 
+    img {
+      filter: invert(1);
+    }
+
     button {
       margin-left: 22px;
       background: rgb(0 0 0 / 0%);
@@ -47,6 +51,10 @@ body {
     align-items: center;
 
     @include btn-style-x($red, 5px);
+
+    img {
+      filter: invert(1);
+    }
 
     button {
       margin-left: 16px;

@@ -763,7 +763,7 @@ body {
 .news-block-grid {
   display: grid;
   grid-template: 1fr 1fr/1fr;
-  gap: 67px;
+  gap: 63px;
   width: 100%;
   margin-top: 48px;
 }
