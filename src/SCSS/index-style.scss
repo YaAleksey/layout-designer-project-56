@@ -17,7 +17,7 @@ body {
 
 .description-content {
   position: relative;
-  padding: 200px 120px 200px;
+  padding: 200px 20px;
 }
 
 .description {
@@ -344,7 +344,7 @@ body {
   .news-container {
     position: relative;
     max-width: 1240px;
-    padding: 102px 20px 0 20px;
+    padding: 102px 20px 0;
   }
 
   .news-item {
@@ -397,6 +397,14 @@ body {
           order: 3;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .news-item {
+    img {
+      @include addapting-img;
     }
   }
 }

@@ -72,6 +72,11 @@ h6 {
   font-size: inherit;
 }
 
+.center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .uppcase {
   text-transform: uppercase;
 }
@@ -506,7 +511,7 @@ body {
 
 .description-content {
   position: relative;
-  padding: 200px 120px 200px;
+  padding: 200px 20px;
 }
 
 .description {
@@ -802,7 +807,7 @@ body {
   .news-container {
     position: relative;
     max-width: 1240px;
-    padding: 102px 20px 0 20px;
+    padding: 102px 20px 0;
   }
   .news-item {
     gap: 25px;
@@ -845,6 +850,14 @@ body {
   }
   .news-item .body .logo-date .date {
     order: 3;
+  }
+}
+@media (max-width: 1200px) {
+  .news-item img {
+    max-width: 100%;
+    max-height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .app-title {

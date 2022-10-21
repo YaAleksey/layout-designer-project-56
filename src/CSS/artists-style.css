@@ -72,6 +72,11 @@ h6 {
   font-size: inherit;
 }
 
+.center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .uppcase {
   text-transform: uppercase;
 }
