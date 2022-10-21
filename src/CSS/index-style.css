@@ -307,7 +307,7 @@ h6 {
 }
 .header-wrapper .header-search .search {
   width: 100%;
-  min-height: 25px;
+  min-height: 28px;
   background-color: #3c3b3d;
   border-radius: 50px;
 }
@@ -319,7 +319,6 @@ h6 {
 }
 .header-wrapper .header-search input::-moz-placeholder {
   margin: auto 0;
-  padding: 0 10px;
   text-transform: uppercase;
   color: #757575;
   font-family: "Roboto Regular", sans-serif;
@@ -329,7 +328,6 @@ h6 {
 }
 .header-wrapper .header-search input:-ms-input-placeholder {
   margin: auto 0;
-  padding: 0 10px;
   text-transform: uppercase;
   color: #757575;
   font-family: "Roboto Regular", sans-serif;
@@ -339,7 +337,6 @@ h6 {
 }
 .header-wrapper .header-search input::placeholder {
   margin: auto 0;
-  padding: 0 10px;
   text-transform: uppercase;
   color: #757575;
   font-family: "Roboto Regular", sans-serif;
@@ -574,11 +571,11 @@ body {
     padding: 250px 20px 200px 20px;
   }
   .description .form-block .form-block-text {
-    margin: 16px 0 15px;
+    margin: 15px 0;
   }
   .main-form {
     display: grid;
-    grid-template: repeat(2, 50px) 60px/1fr;
+    grid-template: repeat(2, 50px) 59px/1fr;
     grid-template-areas: "name" "mail" "btn";
     gap: 24px;
   }
@@ -595,7 +592,7 @@ body {
 @media (min-width: 800px) {
   .description-content {
     position: relative;
-    max-width: 1200px;
+    min-width: 800px;
   }
   .main-form {
     display: grid;
