@@ -11,6 +11,7 @@
 * {
   margin: 0;
   padding: 0;
+
   border: 0;
 }
 
@@ -83,12 +84,13 @@ h6 {
 
 .font-menu {
   color: #fff;
-  text-transform: uppercase;
-  font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
   font-size: 11px;
+  font-family: "Roboto Regular", sans-serif;
   line-height: 16.5px;
+  text-transform: uppercase;
 }
+
 @media (max-width: 454px) {
   .font-menu {
     font-weight: 700;
@@ -98,17 +100,17 @@ h6 {
 
 .font-description-text {
   color: #fff;
-  font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  font-family: "Roboto Regular", sans-serif;
   line-height: 24px;
 }
 
 .font-subscriptions {
   color: #fff;
-  font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
   font-size: 12.8px;
+  font-family: "Roboto Regular", sans-serif;
   line-height: 19.2px;
 }
 
@@ -126,109 +128,117 @@ h6 {
   top: 0;
   left: 0;
   z-index: 1;
+
   width: 100%;
   height: 100%;
+
   vertical-align: middle;
+
+  background-image: url("../images/banner.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   content: "";
-  background-image: url("../images/banner.png");
 }
 
 .font-big-title {
   color: #fff;
-  text-transform: uppercase;
-  font-family: "Roboto Regular", sans-serif;
   font-weight: 700;
   font-size: 60px;
+  font-family: "Roboto Regular", sans-serif;
   line-height: 90px;
+  text-transform: uppercase;
 }
+
 @media (max-width: 799px) {
   .font-big-title {
-    font-family: "Roboto Regular", sans-serif;
     font-weight: 700;
     font-size: 30px;
+    font-family: "Roboto Regular", sans-serif;
     line-height: 45px;
   }
 }
 
 .font-less-title {
   color: #fff;
-  text-transform: uppercase;
-  font-family: "Roboto Regular", sans-serif;
   font-weight: 700;
   font-size: 38px;
+  font-family: "Roboto Regular", sans-serif;
   line-height: 57px;
+  text-transform: uppercase;
 }
+
 @media (max-width: 799px) {
   .font-less-title {
-    font-family: "Roboto Regular", sans-serif;
     font-weight: 700;
     font-size: 18px;
+    font-family: "Roboto Regular", sans-serif;
     line-height: 27px;
   }
 }
 
 .font-subscriptions-title {
   color: #fff;
-  font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
   font-size: 24px;
+  font-family: "Roboto Regular", sans-serif;
   line-height: 36px;
   text-transform: uppercase;
 }
+
 @media (max-width: 799px) {
   .font-subscriptions-title {
-    font-family: "Roboto Regular", sans-serif;
     font-weight: 700;
     font-size: 16px;
+    font-family: "Roboto Regular", sans-serif;
     line-height: 24px;
   }
 }
 
 .price-font {
   color: #fff;
-  font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
   font-size: 64px;
+  font-family: "Roboto Regular", sans-serif;
   line-height: 64px;
   text-transform: uppercase;
 }
 
 .font-rub {
   color: #fff;
-  font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
   font-size: 32px;
+  font-family: "Roboto Regular", sans-serif;
   line-height: 48px;
   text-transform: uppercase;
 }
 
 .font-news-title {
   color: #fff;
-  text-transform: capitalize;
-  font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
   font-size: 30px;
+  font-family: "Roboto Regular", sans-serif;
   line-height: 45px;
+  text-transform: capitalize;
 }
+
 @media (max-width: 1050px) {
   .font-news-title {
-    font-family: "Roboto Regular", sans-serif;
     font-weight: 400;
     font-size: 16px;
+    font-family: "Roboto Regular", sans-serif;
     line-height: 24px;
   }
 }
 
 .font-logo {
   color: #cacaca;
-  text-transform: uppercase;
-  font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
   font-size: 12.8px;
+  font-family: "Roboto Regular", sans-serif;
   line-height: 150%;
+  text-transform: uppercase;
 }
 .font-logo .orange-mark {
   color: #f89202;
@@ -236,15 +246,15 @@ h6 {
 
 .font-footer-title {
   color: #fff;
-  text-transform: uppercase;
-  font-family: "Roboto Regular", sans-serif;
   font-weight: 700;
   font-size: 18px;
+  font-family: "Roboto Regular", sans-serif;
   line-height: 27px;
+  text-transform: uppercase;
 }
 
 .input-field {
-  background: rgba(0, 0, 0, 0);
+  background: rgb(0 0 0 / 0%);
   border: 2px solid #cacaca;
   border-radius: 3px;
 }
@@ -254,14 +264,18 @@ h6 {
   top: 0;
   left: 0;
   z-index: 1;
+
   width: 100%;
   height: 100%;
+
   vertical-align: middle;
+
+  background-image: url("../images/Morten Harket.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   content: "";
-  background-image: url("../images/Morten Harket.png");
 }
 
 .fw700 {
@@ -274,9 +288,10 @@ h6 {
 
 .header-wrapper {
   position: absolute;
-  z-index: 2;
   top: 25px;
   left: 120px;
+  z-index: 2;
+
   display: grid;
   grid-template: auto/auto 0.5fr auto 1fr 248px;
   grid-template-areas: "logo . menu . search";
@@ -284,9 +299,9 @@ h6 {
   width: 80%;
 }
 .header-wrapper .header-logo {
-  grid-area: logo;
   display: grid;
-  grid-template: 1fr/auto auto;
+  grid-area: logo;
+  grid-template: 1fr / auto auto;
   justify-content: start;
 }
 .header-wrapper .header-logo .image {
@@ -297,6 +312,7 @@ h6 {
 .header-wrapper .header-logo .text {
   align-self: center;
   margin-left: 16px;
+
   white-space: nowrap;
 }
 .header-wrapper .header-menu {
@@ -308,50 +324,36 @@ h6 {
 .header-wrapper .header-search .search {
   width: 100%;
   min-height: 28px;
+
   background-color: #3c3b3d;
   border-radius: 50px;
 }
 .header-wrapper .header-search input {
-  color: #fff;
-  font-weight: 600;
   padding-right: 10px;
   padding-left: 10px;
-}
-.header-wrapper .header-search input::-moz-placeholder {
-  margin: auto 0;
-  text-transform: uppercase;
-  color: #757575;
-  font-family: "Roboto Regular", sans-serif;
-  font-weight: 400;
-  font-size: 13.3px;
-  line-height: 15.4px;
-}
-.header-wrapper .header-search input:-ms-input-placeholder {
-  margin: auto 0;
-  text-transform: uppercase;
-  color: #757575;
-  font-family: "Roboto Regular", sans-serif;
-  font-weight: 400;
-  font-size: 13.3px;
-  line-height: 15.4px;
+
+  color: #fff;
+  font-weight: 600;
 }
 .header-wrapper .header-search input::placeholder {
   margin: auto 0;
-  text-transform: uppercase;
+
   color: #757575;
-  font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
   font-size: 13.3px;
+  font-family: "Roboto Regular", sans-serif;
   line-height: 15.4px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 799px) {
   .header-wrapper {
-    display: grid;
-    grid-template: repeat(6, auto)/1fr;
-    grid-template-areas: "logo" "menu" "menu" "menu" "menu" "search";
     top: 25px;
     left: 0;
+
+    display: grid;
+    grid-template: repeat(6, auto) / 1fr;
+    grid-template-areas: "logo" "menu" "menu" "menu" "menu" "search";
     width: 100%;
     padding: 0 20px;
   }
@@ -360,9 +362,9 @@ h6 {
     margin-bottom: 17px;
   }
   .header-wrapper .header-menu {
-    grid-area: menu;
     display: grid;
-    grid-template: repeat(4, auto)/auto;
+    grid-area: menu;
+    grid-template: repeat(4, auto) / auto;
     gap: 3px;
   }
   .header-wrapper .header-search {
@@ -370,6 +372,7 @@ h6 {
     margin-top: 18px;
   }
 }
+
 @media (min-width: 1440px) {
   .header-wrapper {
     display: grid;
@@ -419,7 +422,7 @@ h6 {
 }
 
 .footer-menu {
-  padding: 40px 0 50px 0;
+  padding: 40px 0 50px;
 }
 
 .footer-wrapper {
@@ -430,8 +433,9 @@ h6 {
 @media (min-width: 800px) {
   .footer-container {
     position: relative;
+
     min-width: 800px;
-    padding: 62px 120px 0 120px;
+    padding: 62px 120px 0;
   }
   .footer-info {
     display: grid;
@@ -446,6 +450,7 @@ h6 {
     grid-template: min-content/120px repeat(5, auto) 1fr;
     align-content: center;
     margin: 0 -120px;
+
     border-top: 1px solid #cacaca;
   }
   .footer-menu .item1 {
@@ -469,15 +474,17 @@ h6 {
     padding-right: 16px;
   }
 }
+
 @media (max-width: 799px) {
   .footer-container {
     position: relative;
+
     max-width: 799px;
-    padding: 62px 20px 0 20px;
+    padding: 62px 20px 0;
   }
   .footer-info {
     display: grid;
-    grid-template: repeat(4, auto)/1fr;
+    grid-template: repeat(4, auto) / 1fr;
     gap: 30px;
   }
   .bages-block {
@@ -485,11 +492,12 @@ h6 {
   }
   .footer-menu {
     display: grid;
-    grid-template: repeat(5, auto)/1fr;
+    grid-template: repeat(5, auto) / 1fr;
     gap: 16px;
     margin: 0 -20px;
     padding-right: 20px;
     padding-left: 20px;
+
     border-top: 1px solid #cacaca;
   }
 }
@@ -500,28 +508,32 @@ body {
 .art-main-title {
   position: relative;
   z-index: 2;
+
   margin-bottom: 16px;
 }
 
 .art-main-fanats {
   position: relative;
   z-index: 2;
+
   margin-bottom: 48px;
 }
 
 .art-main-buttons {
   position: relative;
   z-index: 2;
+
   display: grid;
   grid-template: 62px/200px 200px;
   gap: 24px;
 }
 .art-main-buttons .btn-mix {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+
   background-color: #5328a1;
   border-radius: 5px;
 }
@@ -530,14 +542,16 @@ body {
 }
 .art-main-buttons .btn-mix button {
   margin-left: 22px;
-  background: rgba(0, 0, 0, 0);
+
+  background: rgb(0 0 0 / 0%);
 }
 .art-main-buttons .btn-unicum {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+
   background-color: #95390c;
   border-radius: 5px;
 }
@@ -546,35 +560,42 @@ body {
 }
 .art-main-buttons .btn-unicum button {
   margin-left: 16px;
-  background: rgba(0, 0, 0, 0);
+
+  background: rgb(0 0 0 / 0%);
 }
 
 @media (max-width: 1439px) {
   .art-description-content {
-    max-width: 1439px;
     position: relative;
+
+    max-width: 1439px;
     padding: 200px 50px;
   }
 }
+
 @media (max-width: 799px) {
   .art-description-content {
-    max-width: 799px;
     position: relative;
+
+    max-width: 799px;
     padding: 225px 20px;
   }
   .art-main-buttons {
     position: relative;
     z-index: 2;
+
     display: grid;
     grid-template: 62px 62px/200px;
     gap: 24px;
   }
 }
+
 @media (min-width: 1440px) {
   .art-description-content {
-    min-width: 1440px;
     position: relative;
-    padding: 250px 120px 223px 120px;
+
+    min-width: 1440px;
+    padding: 250px 120px 223px;
   }
 }
 .art-tracks-content .tracks-title {
@@ -604,9 +625,10 @@ body {
 
 @media (max-width: 799px) {
   .art-tracks-content {
-    max-width: 799px;
     position: relative;
-    padding: 100px 20px 0 20px;
+
+    max-width: 799px;
+    padding: 100px 20px 0;
   }
   .tracks-block {
     display: grid;
@@ -614,10 +636,11 @@ body {
     gap: 25px;
   }
 }
+
 @media (min-width: 800px) {
   .art-tracks-content {
     max-width: 1240px;
-    padding: 100px 20px 0 20px;
+    padding: 100px 20px 0;
   }
   .tracks-block {
     display: grid;
@@ -625,7 +648,7 @@ body {
     gap: 49px;
   }
   .tracks-block .column {
-    grid-template-columns: 1span;
+    grid-template-columns: 1 span;
   }
 }
 .albums-content .main-title,
@@ -636,25 +659,27 @@ body {
 .sames-content .items {
   display: grid;
   row-gap: 25px;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
+
+  column-gap: 50px;
 }
+
 @media (min-width: 800px) {
   .albums-content .items,
-.sames-content .items {
+  .sames-content .items {
     grid-template-columns: repeat(auto-fill, 250px);
   }
 }
+
 @media (max-width: 799px) {
   .albums-content .items,
-.sames-content .items {
+  .sames-content .items {
     grid-template-columns: repeat(auto-fill, 137px);
   }
 }
 .albums-content .items .img-title-text,
 .sames-content .items .img-title-text {
   display: grid;
-  grid-template: repeat(2, auto)/auto;
+  grid-template: repeat(2, auto) / auto;
   gap: 18px;
 }
 
@@ -664,25 +689,27 @@ body {
 
 @media (min-width: 800px) {
   .albums-content,
-.sames-content {
+  .sames-content {
     max-width: 1240px;
-    padding: 100px 20px 0 20px;
+    padding: 100px 20px 0;
   }
   .albums-content .items .img-title-text img,
-.sames-content .items .img-title-text img {
+  .sames-content .items .img-title-text img {
     width: 250px;
     height: 250px;
   }
 }
+
 @media (max-width: 799px) {
   .albums-content,
-.sames-content {
-    max-width: 799px;
+  .sames-content {
     position: relative;
-    padding: 100px 20px 0 20px;
+
+    max-width: 799px;
+    padding: 100px 20px 0;
   }
   .albums-content .items .img-title-text img,
-.sames-content .items .img-title-text img {
+  .sames-content .items .img-title-text img {
     width: 137px;
     height: 137px;
   }

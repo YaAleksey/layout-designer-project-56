@@ -1,10 +1,10 @@
 .header-wrapper {
   position: absolute;
 
-  z-index: 2;
-
   top: 25px;
   left: 120px;
+
+  z-index: 2;
 
   display: grid;
   grid-template: auto / auto 0.5fr auto 1fr 248px;
@@ -13,9 +13,9 @@
   width: 80%;
 
   .header-logo {
-    grid-area: logo;
 
     display: grid;
+    grid-area: logo;
     grid-template: 1fr / auto auto;
     justify-content: start;
 
@@ -43,23 +43,25 @@
     .search {
       width: 100%;
       min-height: 28px;
+
       background-color: $dark;
       border-radius: 50px;
     }
 
     input {
-      color: #fff;
-      font-weight: 600;
 
       padding-right: 10px;
       padding-left: 10px;
+
+      color: #fff;
+      font-weight: 600;
     }
 
     input::placeholder {
       margin: auto 0;
-      text-transform: uppercase;
 
       color: $arial-color;
+      text-transform: uppercase;
 
       @include font-x(400, 13.3px, 15.4px);
     }
@@ -68,6 +70,10 @@
 
 @media (max-width: 799px) {
   .header-wrapper {
+
+    top: 25px;
+    left: 0;
+
     display: grid;
     grid-template: repeat(6, auto) / 1fr;
     grid-template-areas:
@@ -77,9 +83,6 @@
       "menu"
       "menu"
       "search";
-
-    top: 25px;
-    left: 0;
 
     width: 100%;
 
@@ -91,9 +94,9 @@
     }
 
     .header-menu {
-      grid-area: menu;
 
       display: grid;
+      grid-area: menu;
       grid-template: repeat(4, auto) / auto;
       gap: 3px;
     }

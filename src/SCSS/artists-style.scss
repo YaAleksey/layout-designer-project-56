@@ -30,8 +30,8 @@ body {
 
   & .btn-mix {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     @include btn-style-x($purple, 5px);
 
@@ -41,14 +41,15 @@ body {
 
     button {
       margin-left: 22px;
+
       background: rgb(0 0 0 / 0%);
     }
   }
 
   & .btn-unicum {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     @include btn-style-x($red, 5px);
 
@@ -58,6 +59,7 @@ body {
 
     button {
       margin-left: 16px;
+
       background: rgb(0 0 0 / 0%);
     }
   }
@@ -65,16 +67,18 @@ body {
 
 @media (max-width: 1439px) {
   .art-description-content {
-    max-width: 1439px;
     position: relative;
+
+    max-width: 1439px;
     padding: 200px 50px;
   }
 }
 
 @media (max-width: 799px) {
   .art-description-content {
-    max-width: 799px;
     position: relative;
+
+    max-width: 799px;
     padding: 225px 20px;
   }
 
@@ -90,9 +94,10 @@ body {
 
 @media (min-width: 1440px) {
   .art-description-content {
-    min-width: 1440px;
     position: relative;
-    padding: 250px 120px 223px 120px;
+
+    min-width: 1440px;
+    padding: 250px 120px 223px;
   }
 }
 
@@ -131,9 +136,10 @@ body {
 
 @media (max-width: 799px) {
   .art-tracks-content {
-    max-width: 799px;
     position: relative;
-    padding: 100px 20px 0 20px;
+
+    max-width: 799px;
+    padding: 100px 20px 0;
   }
 
   .tracks-block {
@@ -146,7 +152,7 @@ body {
 @media (min-width: 800px) {
   .art-tracks-content {
     max-width: 1240px;
-    padding: 100px 20px 0 20px;
+    padding: 100px 20px 0;
   }
   .tracks-block {
     @include two-columns-grid(49px);
@@ -162,11 +168,13 @@ body {
   .items {
     display: grid;
     row-gap: 25px;
+
     column-gap: 50px;
 
     @media (min-width: 800px) {
       grid-template-columns: repeat(auto-fill, 250px);
     }
+
     @media (max-width: 799px) {
       grid-template-columns: repeat(auto-fill, 137px);
     }
@@ -193,7 +201,7 @@ body {
   .albums-content,
   .sames-content {
     max-width: 1240px;
-    padding: 100px 20px 0 20px;
+    padding: 100px 20px 0;
 
     .items {
       .img-title-text {
@@ -209,9 +217,10 @@ body {
 @media (max-width: 799px) {
   .albums-content,
   .sames-content {
-    max-width: 799px;
     position: relative;
-    padding: 100px 20px 0 20px;
+
+    max-width: 799px;
+    padding: 100px 20px 0;
 
     .items {
       .img-title-text {

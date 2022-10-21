@@ -14,3 +14,6 @@ rules:
   at-rule-no-unknown: null
   scss/no-global-function-names: null
   scss/at-rule-no-unknown: true
+  rule-empty-line-before: null
+  scss/at-import-no-partial-leading-underscore: null
+  scss/operator-no-unspaced: null

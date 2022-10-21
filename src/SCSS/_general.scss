@@ -1,4 +1,4 @@
-//-------------------------------------------------------------CLEAN STANDARD STYLES----------------------------------------------------------------------------
+// CLEAN STANDARD STYLES
 @import "_variable";
 
 @font-face {
@@ -76,7 +76,8 @@ h6 {
   font-weight: 400;
   font-size: inherit;
 }
-//-------------------------------------------------------------INDEX.HTML GENERAL STYLES----------------------------------------------------------------------------
+
+// INDEX.HTML GENERAL STYLES
 .center {
   margin-right: auto;
   margin-left: auto;
@@ -87,13 +88,12 @@ h6 {
 }
 
 @mixin font-x($fw, $fz, $lh) {
-  font-family: "Roboto Regular", sans-serif;
-
-  @content;
-
   font-weight: $fw;
   font-size: $fz;
+  font-family: "Roboto Regular", sans-serif;
   line-height: $lh;
+
+  @content;
 }
 
 .font-menu {
@@ -116,6 +116,7 @@ h6 {
 
 .font-subscriptions {
   color: #fff;
+
   @include font-x(400, 12.8px, 19.2px);
 }
 
@@ -172,6 +173,7 @@ h6 {
 .font-big-title {
   color: #fff;
   text-transform: uppercase;
+
   @include font-x(700, 60px, 90px);
 
   @media (max-width: 799px) {
@@ -182,6 +184,7 @@ h6 {
 .font-less-title {
   color: #fff;
   text-transform: uppercase;
+
   @include font-x(700, 38px, 57px);
 
   @media (max-width: 799px) {
@@ -191,6 +194,7 @@ h6 {
 
 .font-subscriptions-title {
   color: #fff;
+
   @include font-x(400, 24px, 36px);
   text-transform: uppercase;
 
@@ -201,12 +205,14 @@ h6 {
 
 .price-font {
   color: #fff;
+
   @include font-x(400, 64px, 64px);
   text-transform: uppercase;
 }
 
 .font-rub {
   color: #fff;
+
   @include font-x(400, 32px, 48px);
   text-transform: uppercase;
 }
@@ -214,6 +220,7 @@ h6 {
 .font-news-title {
   color: #fff;
   text-transform: capitalize;
+
   @include font-x(400, 30px, 45px);
 
   @media (max-width: 1050px) {
@@ -224,6 +231,7 @@ h6 {
 .font-logo {
   color: $main-color-text;
   text-transform: uppercase;
+
   @include font-x(400, 12.8px, 150%);
 
   .orange-mark {
@@ -234,6 +242,7 @@ h6 {
 .font-footer-title {
   color: #fff;
   text-transform: uppercase;
+
   @include font-x(700, 18px, 27px);
 }
 
@@ -249,7 +258,7 @@ h6 {
   object-fit: cover;
 }
 
-//-------------------------------------------------------------ARTISTS GENERAL STYLES----------------------------------------------------------------------------
+// ARTISTS GENERAL STYLES
 
 .art-bg::before {
   @include bg-img;
@@ -260,6 +269,7 @@ h6 {
 @mixin btn-style-x($bg-col, $bd-radius) {
   width: 100%;
   height: 100%;
+
   background-color: $bg-col;
   border-radius: $bd-radius;
 }
@@ -270,7 +280,7 @@ h6 {
   gap: $gap-value;
 
   .column {
-    grid-template-columns: 1span;
+    grid-template-columns: 1 span;
   }
 }
 
