@@ -88,17 +88,6 @@ body {
     );
 }
 
-@media (max-width: 1439px) {
-  .main-form {
-    @include grid-form-x(auto, 273px, auto, 273px);
-    grid-template-areas:
-      "name mail"
-      "btn btn";
-    gap: 24px;
-    margin: 17px auto 0;
-  }
-}
-
 @media (max-width: 799px) {
   .description-content {
     position: relative;
@@ -109,14 +98,14 @@ body {
   .description {
     .form-block {
       .form-block-text {
-        margin: 16px 0;
+        margin: 16px 0 15px;
       }
     }
   }
 
   .main-form {
     display: grid;
-    grid-template: repeat(2, minmax(50px, 1fr)) 60px / 1fr;
+    grid-template: repeat(2, 50px) 60px / 1fr;
     grid-template-areas:
       "name"
       "mail"
@@ -137,10 +126,10 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 800px) {
   .description-content {
     position: relative;
-    min-width: 1440px;
+    max-width: 1200px;
   }
 
   .main-form {
