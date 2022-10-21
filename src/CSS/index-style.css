@@ -597,7 +597,7 @@ body {
   }
   .main-form {
     display: grid;
-    grid-template: repeat(2, minmax(50px, 1fr)) 57px/1fr;
+    grid-template: repeat(2, minmax(50px, 1fr)) 60px/1fr;
     grid-template-areas: "name" "mail" "btn";
     gap: 24px;
   }
